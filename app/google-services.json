@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "980969999724",
+    "project_id": "morty-30149",
+    "storage_bucket": "morty-30149.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980969999724:android:462e54e2f2df4569e6f749",
+        "android_client_info": {
+          "package_name": "com.azeem.morty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980969999724-aohos2n43qi4cj72la6f2562aj17el1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXNcd-QPihQBmUi3JhlbLN2yHuH6y7YFM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980969999724-aohos2n43qi4cj72la6f2562aj17el1u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

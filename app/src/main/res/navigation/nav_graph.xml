@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/characterListFragment">
+
+    <fragment
+        android:id="@+id/characterListFragment"
+        android:name="com.azeem.morty.ui.fragments.character.list.CharacterListFragment"
+        android:label="Rick And Morty Characters"
+        tools:layout="@layout/fragment_character_list">
+        <action
+            android:id="@+id/action_characterListFragment_to_characterDetailFragment"
+            app:destination="@id/characterDetailFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterDetailFragment"
+        android:name="com.azeem.morty.ui.fragments.character.detail.CharacterDetailFragment"
+        android:label="Character Details"
+        tools:layout="@layout/fragment_character_detail">
+        <deepLink app:uri="https://morty.com/character/{characterId}"/>
+        <argument
+            android:name="characterId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodeListFragment"
+        android:name="com.azeem.morty.ui.fragments.episde.list.EpisodeListFragment"
+        android:label="Rick And Morty Episodes"
+        tools:layout="@layout/fragment_episode_list" />
+
+    <dialog
+        android:id="@+id/episodeDetailBottomSheetFragment"
+        android:name="com.azeem.morty.ui.fragments.episde.detailbottomsheet.EpisodeDetailBottomSheetFragment"
+        android:label="EpisodeDetailBottomSheetFragment" >
+        <argument
+            android:name="episode_id"
+            app:argType="integer"
+            android:defaultValue="-1"/>
+    </dialog>
+    <action
+        android:id="@+id/action_global_episodeDetailBottomSheetFragment"
+        app:destination="@id/episodeDetailBottomSheetFragment" />
+    <fragment
+        android:id="@+id/characterSearchFragment"
+        android:name="com.azeem.morty.ui.fragments.search.CharacterSearchFragment"
+        android:label="Search" />
+</navigation>
